@@ -83,7 +83,7 @@ Traditional_Approach
 	Pre-Requisites -
 		* Maven is installed
 	Execution command -
-		* mvn -f pom.xml clean test -DAPP_URL=V1_URL -DDYNAMIC_URL=DYNAMIC_V1_URL' for execution in V1 environment
-		* mvn -f pom.xml clean test -DAPP_URL=V2_URL -DDYNAMIC_URL=DYNAMIC_V2_URL' for execution in V2 environment
+		* **mvn -f pom.xml clean test -DAPP_URL=V1_URL -DDYNAMIC_URL=DYNAMIC_V1_URL** for execution in V1 environment
+		* **mvn -f pom.xml clean test -DAPP_URL=V2_URL -DDYNAMIC_URL=DYNAMIC_V2_URL** for execution in V2 environment
 	TestNG Report -
 		Navigate to 'Traditional_Approach\target\surefire-reports' and click on 'index.html' page
