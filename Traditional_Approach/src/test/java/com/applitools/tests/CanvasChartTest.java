@@ -24,10 +24,12 @@ public class CanvasChartTest extends BaseClass {
 
 	/**
 	 * Test method to validate bar chart numbers and heights
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void validateBarChartsNumberAndHeights() {
+	public void validateBarChartsNumberAndHeights() throws InterruptedException {
 		canvasChart.clickOnShowExpenseChartButton(getDriver());
+		Thread.sleep(2000);
 		/**
 		 * This cannot be automated as Selenium WebDriver cannot extract data from
 		 * Canvas. This is one of the limitation in Selenium that it does not supports
@@ -37,10 +39,12 @@ public class CanvasChartTest extends BaseClass {
 
 	/**
 	 * Test class to validate next year expense data
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void validateNextYearExpenseData() {
+	public void validateNextYearExpenseData() throws InterruptedException {
 		canvasChart.clickOnShowNextYearExpenseData();
+		Thread.sleep(2000);
 		/**
 		 * This cannot be automated as Selenium WebDriver cannot extract data from
 		 * Canvas. This is one of the limitation in Selenium that it does not supports
