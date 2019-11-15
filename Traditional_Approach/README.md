@@ -1,10 +1,10 @@
 # APPLITOOLS HACKATHON SOLUTION USING TRADITIONAL AUTOMATION APPROACH
 This file contains details about the traditional approach used for automating the user scenarios provided in [hackathon instruction](https://applitools.com/hackathon-instructions). 
-#Tools Used
+# Tools Used
 * Build Automation Tool - Maven
 * Programming Language - Java
 * Testing Framework - TestNG
-#Project Structure - The project structure is shown below - 
+# Project Structure - The project structure is shown below - 
 ```
 Traditional_Approach
 ├
@@ -28,13 +28,13 @@ Traditional_Approach
 |___pom.xml
 └───TestData
 ```
-#Package Components in the project -
+# Package Components in the project -
 	* Chrome_Driver - Contains the chrome_driver.exe
 	* com.applitools.base package - Contains Base Class for getting and closing driver object
 	* com.applitools.listener package - Contains Listener Class for capturing screen shots for failed test cases
 	* com.applitools.tests package - Contains test classes
 	* com.applitools.webpages.factory packages - Contains the page factory objects for respective pages
-#TestNG.xml -
+# TestNG.xml -
 	Contains the test cases and the mode of execution (parallel / sequential)
 	```
 	<?xml version="1.0" encoding="UTF-8"?>
@@ -72,14 +72,14 @@ Traditional_Approach
 		</test>
 	</suite>
 	```
-#environment.properties - It contains the V1 and V2 test environments URLs. During execution we will pass them as parameters
+# 'environment.properties' - It contains the V1 and V2 test environments URLs. During execution we will pass them as parameters
 	```
 	V1_URL = https://demo.applitools.com/hackathon.html
 	V2_URL = https://demo.applitools.com/hackathonV2.html
 	DYNAMIC_V1_URL = https://demo.applitools.com/hackathon.html?showAd=true
 	DYNAMIC_V2_URL = https://demo.applitools.com/hackathonV2.html?showAd=true
 	```
-#Execution of the project - 
+# Execution of the project - 
 	Pre-Requisites -
 		* Maven is installed
 	Execution command -
