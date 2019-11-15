@@ -43,11 +43,11 @@ public class DynamicContentPage {
 	private WebElement logInBtn;
 
 	// Flash sell add 1
-	@FindBy(id = "flashSale")
+	@FindBy(xpath = "/html/body/div/div[3]/div[2]/div/div/div[1]/div[2]/div/div/div/div[2]/img")
 	private List<WebElement> flashSale1;
 
 	// Flash sell add 2
-	@FindBy(id = "flashSale2")
+	@FindBy(xpath = "/html/body/div/div[3]/div[2]/div/div/div[1]/div[2]/div/div/div/div[4]/img")
 	private List<WebElement> flashSale2;
 
 	// Enter username
