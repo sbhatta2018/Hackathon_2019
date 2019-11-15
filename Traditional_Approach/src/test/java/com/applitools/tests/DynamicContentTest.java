@@ -30,7 +30,8 @@ public class DynamicContentTest extends BaseClass {
 
 	/**
 	 * Test method to validate first GIF presence
-	 * @throws InterruptedException 
+	 * 
+	 * @throws InterruptedException
 	 */
 	@Test
 	public void validateFirstGIFPresence() throws InterruptedException {
@@ -40,12 +41,24 @@ public class DynamicContentTest extends BaseClass {
 
 	/**
 	 * Test method to validate second GIF presence
-	 * @throws InterruptedException 
+	 * 
+	 * @throws InterruptedException
 	 */
 	@Test
 	public void validateSecondGIFPresence() throws InterruptedException {
 		Thread.sleep(2000);
 		assertEquals(dynamicContentPage.isFlashSaleSecondExists(), true, "Second Flash Sell Exists");
+	}
+
+	/**
+	 * Test method to verify different gif
+	 */
+	@Test
+	public void verifyDifferentGIF() {
+		/**
+		 * This cannot be automated as Selenium WebDriver cannot compare images. This is
+		 * one of the limitation in Selenium
+		 */
 	}
 
 	/**
