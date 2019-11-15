@@ -82,7 +82,7 @@ Traditional_Approach
 # Execution of the project - 
 	Pre-Requisites -
 		* Maven is installed
-	Execution command -
+	Execution command - Navigate to pom.xml directory and provide the below commands
 		* 'mvn -f pom.xml clean test -DAPP_URL=V1_URL -DDYNAMIC_URL=DYNAMIC_V1_URL' for execution in V1 environment
 		* 'mvn -f pom.xml clean test -DAPP_URL=V2_URL -DDYNAMIC_URL=DYNAMIC_V2_URL' for execution in V2 environment
 	TestNG Report -
