@@ -30,17 +30,21 @@ public class DynamicContentTest extends BaseClass {
 
 	/**
 	 * Test method to validate first GIF presence
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void validateFirstGIFPresence() {
+	public void validateFirstGIFPresence() throws InterruptedException {
+		Thread.sleep(2000);
 		assertEquals(dynamicContentPage.isFlashSaleFirstExists(), true, "First Flash Sell Exists");
 	}
 
 	/**
 	 * Test method to validate second GIF presence
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void validateSecondGIFPresence() {
+	public void validateSecondGIFPresence() throws InterruptedException {
+		Thread.sleep(2000);
 		assertEquals(dynamicContentPage.isFlashSaleSecondExists(), true, "Second Flash Sell Exists");
 	}
 
