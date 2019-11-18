@@ -12,7 +12,7 @@
 	</test>
 	<test name="DATA_DRIVEN_TEST">
 		<classes>
-			<class name="ccom.applitools.traditional.tests.LoginPageDataDrivenTesting" />
+			<class name="com.applitools.traditional.tests.LoginPageDataDrivenTesting" />
 		</classes>
 	</test>
 	<test name="TABLE_SORT_TEST">
