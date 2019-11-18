@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AAPLITOOLS_SUITE">
+	<listeners>
+		<listener
+			class-name="com.applitools.listener.ScreenShotListener" />
+	</listeners>
+	<test name="LOGIN_PAGE" parallel="methods" thread-count="10">
+		<classes>
+			<class name="com.applitools.traditional.tests.LoginPageUIElementsTest" />
+		</classes>
+	</test>
+	<test name="DATA_DRIVEN_TEST">
+		<classes>
+			<class name="ccom.applitools.traditional.tests.LoginPageDataDrivenTesting" />
+		</classes>
+	</test>
+	<test name="TABLE_SORT_TEST">
+		<classes>
+			<class name="com.applitools.traditional.tests.TableSortTest" />
+		</classes>
+	</test>
+	<test name="CANVAS_CHART_TEST">
+		<classes>
+			<class name="com.applitools.traditional.tests.CanvasChartTest" />
+		</classes>
+	</test>
+	<test name="DYNAMIC_CONTENT_TEST" parallel="methods"
+		thread-count="2">
+		<classes>
+			<class name="com.applitools.traditional.tests.DynamicContentTest" />
+		</classes>
+	</test>
+</suite>
