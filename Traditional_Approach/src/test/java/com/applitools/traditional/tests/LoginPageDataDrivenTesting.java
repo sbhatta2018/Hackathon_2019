@@ -1,4 +1,4 @@
-package com.applitools.tests;
+package com.applitools.traditional.tests;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;

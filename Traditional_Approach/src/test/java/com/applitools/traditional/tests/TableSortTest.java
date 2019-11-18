@@ -1,4 +1,4 @@
-package com.applitools.tests;
+package com.applitools.traditional.tests;
 
 import static org.testng.Assert.assertEquals;
 import java.util.LinkedHashMap;
