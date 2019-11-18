@@ -75,12 +75,12 @@ public class LoginPageDataDrivenTesting extends BaseClass {
 		loginPage.clickOnLoginButton();
 		if (StringUtils.isEmpty(username) && StringUtils.isEmpty(password)) {
 			assertEquals(loginPage.validateEmptyUserNamePassword(), true, "Empty username /  password error message");
-		} else if (StringUtils.isEmpty(username)) {
+		} else if (StringUtils.isEmpty(username) && !StringUtils.isEmpty(password)) {
 			assertEquals(loginPage.validateErrorUserNameMsg(), true, "Empty user name error message");
-		} else if (StringUtils.isEmpty(password)) {
+		} else if (StringUtils.isEmpty(password) && !StringUtils.isEmpty(username)) {
 			assertEquals(loginPage.validateErrorPasswordMsg(), true, "Empty password error message");
 		} else {
-			assertEquals(loginPage.isPageOpened(getDriver()), true, "Empty password error message");
+			assertEquals(loginPage.isPageOpened(getDriver()), true, "Logged in Successfully");
 		}
 	}
 }
