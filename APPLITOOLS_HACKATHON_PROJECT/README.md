@@ -6,7 +6,7 @@ This file contains details about the traditional approach used for automating th
 * Testing Framework - TestNG
 # Project Structure - The project structure is shown below - 
 ```
-Traditional_Approach
+APPLITOOLS_HACKATHON_PROJECT
 ├
 ├───Chrome_Driver
 ├───src
@@ -32,9 +32,9 @@ Traditional_Approach
 	* Chrome_Driver - Contains the chrome_driver.exe
 	* com.applitools.base package - Contains Base Class for getting and closing driver object
 	* com.applitools.listener package - Contains Listener Class for capturing screen shots for failed test cases
-	* com.applitools.tests package - Contains test classes
+	* com.applitools.traditional.tests package - Contains test classes
 	* com.applitools.webpages.factory packages - Contains the page factory objects for respective pages
-# TestNG.xml -
+# traditional_suite.xml -
 	Contains the test cases and the mode of execution (parallel / sequential)
 	```
 	<?xml version="1.0" encoding="UTF-8"?>
@@ -46,28 +46,28 @@ Traditional_Approach
 		</listeners>
 		<test name="LOGIN_PAGE" parallel="methods" thread-count="10">
 			<classes>
-				<class name="com.applitools.tests.LoginPageUIElementsTest" />
+				<class name="com.applitools.traditional.tests.LoginPageUIElementsTest" />
 			</classes>
 		</test>
 		<test name="DATA_DRIVEN_TEST">
 			<classes>
-				<class name="com.applitools.tests.LoginPageDataDrivenTesting" />
+				<class name="com.applitools.traditional.tests.LoginPageDataDrivenTesting" />
 			</classes>
 		</test>
 		<test name="TABLE_SORT_TEST">
 			<classes>
-				<class name="com.applitools.tests.TableSortTest" />
+				<class name="com.applitools.traditional.tests.TableSortTest" />
 			</classes>
 		</test>
 		<test name="CANVAS_CHART_TEST">
 			<classes>
-				<class name="com.applitools.tests.CanvasChartTest" />
+				<class name="com.applitools.traditional.tests.CanvasChartTest" />
 			</classes>
 		</test>
 		<test name="DYNAMIC_CONTENT_TEST" parallel="methods"
 			thread-count="2">
 			<classes>
-			<class name="com.applitools.tests.DynamicContentTest" />
+			<class name="com.applitools.traditional.tests.DynamicContentTest" />
 			</classes>
 		</test>
 	</suite>
@@ -86,4 +86,4 @@ Traditional_Approach
 		* 'mvn -f pom.xml clean test -DAPP_URL=V1_URL -DDYNAMIC_URL=DYNAMIC_V1_URL' for execution in V1 environment
 		* 'mvn -f pom.xml clean test -DAPP_URL=V2_URL -DDYNAMIC_URL=DYNAMIC_V2_URL' for execution in V2 environment
 	TestNG Report -
-		Navigate to 'Traditional_Approach\target\surefire-reports' and click on 'index.html' page
+		Navigate to 'APPLITOOLS_HACKATHON_PROJECT\target\surefire-reports' and click on 'index.html' page
