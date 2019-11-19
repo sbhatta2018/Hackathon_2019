@@ -1,4 +1,4 @@
-package com.applitools.base;
+package com.applitools.traditional.approach.base;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;

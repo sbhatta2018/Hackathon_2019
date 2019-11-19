@@ -1,4 +1,4 @@
-package com.applitools.webpages.factory;
+package com.applitools.traditional.approach.webpages.factory;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

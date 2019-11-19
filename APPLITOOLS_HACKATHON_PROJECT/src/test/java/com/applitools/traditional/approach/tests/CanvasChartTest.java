@@ -1,10 +1,10 @@
-package com.applitools.traditional.tests;
+package com.applitools.traditional.approach.tests;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.applitools.base.BaseClass;
-import com.applitools.webpages.factory.CanvasChart;
+import com.applitools.traditional.approach.base.BaseClass;
+import com.applitools.traditional.approach.webpages.factory.CanvasChart;
 
 /**
  * This class contains test class for testing canvas page

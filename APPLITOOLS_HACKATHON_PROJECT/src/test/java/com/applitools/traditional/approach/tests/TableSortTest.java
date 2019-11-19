@@ -1,11 +1,12 @@
-package com.applitools.traditional.tests;
+package com.applitools.traditional.approach.tests;
 
 import static org.testng.Assert.assertEquals;
 import java.util.LinkedHashMap;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import com.applitools.base.BaseClass;
-import com.applitools.webpages.factory.ExpensePage;
+
+import com.applitools.traditional.approach.base.BaseClass;
+import com.applitools.traditional.approach.webpages.factory.ExpensePage;
 
 /**
  * This class contains test method to test table data sorting and data mismatch

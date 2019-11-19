@@ -1,4 +1,4 @@
-package com.applitools.traditional.tests;
+package com.applitools.traditional.approach.tests;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -10,8 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import org.apache.commons.lang3.StringUtils;
 
-import com.applitools.base.BaseClass;
-import com.applitools.webpages.factory.LoginPage;
+import com.applitools.traditional.approach.base.BaseClass;
+import com.applitools.traditional.approach.webpages.factory.LoginPage;
 
 /**
  * This class tests login functionality using Data Driven Testing

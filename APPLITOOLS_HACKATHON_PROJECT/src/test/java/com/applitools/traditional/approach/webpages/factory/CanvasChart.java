@@ -1,4 +1,4 @@
-package com.applitools.webpages.factory;
+package com.applitools.traditional.approach.webpages.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

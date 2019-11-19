@@ -1,4 +1,4 @@
-package com.applitools.webpages.factory;
+package com.applitools.traditional.approach.webpages.factory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +22,7 @@ public class DynamicContentPage {
 		Properties prop = new Properties();
 		try {
 			InputStream environmentFile = new FileInputStream(
-					System.getProperty("user.dir") + File.separator + "environment.properties");
+					System.getProperty("user.dir") + File.separator + "traditional_environment.properties");
 			prop.load(environmentFile);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();

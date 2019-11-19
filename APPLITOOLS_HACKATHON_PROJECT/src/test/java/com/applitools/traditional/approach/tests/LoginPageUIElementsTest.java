@@ -1,11 +1,11 @@
-package com.applitools.traditional.tests;
+package com.applitools.traditional.approach.tests;
 
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.applitools.base.BaseClass;
-import com.applitools.webpages.factory.LoginPage;
+import com.applitools.traditional.approach.base.BaseClass;
+import com.applitools.traditional.approach.webpages.factory.LoginPage;
 
 /**
  * This class contains test method for testing Login Page UI elements

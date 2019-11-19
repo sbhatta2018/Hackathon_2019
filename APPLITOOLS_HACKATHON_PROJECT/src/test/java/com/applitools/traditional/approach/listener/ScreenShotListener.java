@@ -1,4 +1,4 @@
-package com.applitools.listener;
+package com.applitools.traditional.approach.listener;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.TestListenerAdapter;
 
-import com.applitools.base.BaseClass;
+import com.applitools.traditional.approach.base.BaseClass;
 
 /**
  * This class will listen for test failures and captures screen shot of a test case fails
