@@ -9,7 +9,7 @@
 		<jre.level>1.8</jre.level>
 		<jdk.level>1.8</jdk.level>
 	</properties>
-	<description>A sample Maven project that demonstrates traditional approach to automate web application
+	<description>A sample Maven project that demonstrates traditional approach vs visual AI to automate web application
     </description>
 	<dependencies>
 		<dependency>
@@ -38,6 +38,25 @@
 			<groupId>net.sourceforge.jexcelapi</groupId>
 			<artifactId>jxl</artifactId>
 			<version>2.6.12</version>
+		</dependency>
+		<!-- Applitools SDK -->
+		<dependency>
+			<groupId>com.applitools</groupId>
+			<artifactId>eyes-selenium-java3</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		<!-- JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.tngtech.java</groupId>
+			<artifactId>junit-dataprovider</artifactId>
+			<version>1.5.0</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>
