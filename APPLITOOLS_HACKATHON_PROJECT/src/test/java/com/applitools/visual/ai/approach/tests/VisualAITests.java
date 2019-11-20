@@ -1,14 +1,12 @@
 package com.applitools.visual.ai.approach.tests;
 
 import static org.junit.Assert.assertEquals;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.StringUtils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -18,17 +16,15 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import com.applitools.eyes.EyesRunner;
 import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResultsSummary;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.fluent.Target;
-import com.applitools.visual.ai.approach.base.VisualBaseClass;
 import com.tngtech.java.junit.dataprovider.DataProvider;
-import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 
 /**
  * Runs Applitools test for the hackathon app
@@ -104,6 +100,7 @@ public class VisualAITests extends VisualBaseClass {
 		// Start the test
 		eyes.open(driver, "Hackathon App", "Table Sort Test", new RectangleSize(1300, 580));
 
+		// Full page screenshot
 		eyes.setForceFullPageScreenshot(true);
 
 		// Take screenshot of the table before sorting
@@ -126,6 +123,7 @@ public class VisualAITests extends VisualBaseClass {
 		// Start the test
 		eyes.open(driver, "Hackathon App", "Canvas Chart Test", new RectangleSize(1300, 580));
 
+		// Full page screenshot
 		eyes.setForceFullPageScreenshot(true);
 
 		// Click on the Compare Expenses link
@@ -154,13 +152,14 @@ public class VisualAITests extends VisualBaseClass {
 		// Start the test
 		eyes.open(driver, "Hackathon App", "Dynamic Content Test", new RectangleSize(1300, 580));
 
-		//driver.get("https://demo.applitools.com/hackathon.html?showAd=true");
-		driver.get(prop.getProperty(DYNAMIC_URL));
-		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		// Open the dynamic content URL
+		driver.get(prop.getProperty(DYNAMIC_URL));		
 
 		// Login to the application
 		validLogin();
+		
+		// Timeout so that all the gifs are loaded 
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		// Take screenshot of both the gifs
 		eyes.checkWindow("For both flash sale gifs");
@@ -212,7 +211,7 @@ public class VisualAITests extends VisualBaseClass {
 		closeBrowserWindowAndEyes();
 
 		// Wait and collect all test results
-		allTestResults = runner.getAllTestResults();
+		allTestResults = runner.getAllTestResults(); 
 
 		// Print results
 		System.out.println(allTestResults);
