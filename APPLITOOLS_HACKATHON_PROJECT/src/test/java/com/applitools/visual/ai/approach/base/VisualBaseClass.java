@@ -54,7 +54,7 @@ public class VisualBaseClass {
 
 	public static BatchInfo getBatchInfo() {
 		if (batch == null) {
-			batch = new BatchInfo("Hackathon batch");
+			batch = new BatchInfo("Hackathon");
 		}
 		return batch;
 	}
