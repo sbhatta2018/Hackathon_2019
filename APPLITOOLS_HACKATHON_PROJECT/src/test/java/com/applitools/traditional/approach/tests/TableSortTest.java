@@ -1,9 +1,13 @@
 package com.applitools.traditional.approach.tests;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 import java.util.LinkedHashMap;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import com.applitools.traditional.approach.base.BaseClass;
 import com.applitools.traditional.approach.webpages.factory.ExpensePage;
@@ -12,6 +16,7 @@ import com.applitools.traditional.approach.webpages.factory.ExpensePage;
  * This class contains test method to test table data sorting and data mismatch
  * after sorting
  */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TableSortTest extends BaseClass {
 	static ExpensePage expensePage;
 	static LinkedHashMap<String, String> tansactionBeforeSort;
@@ -32,7 +37,7 @@ public class TableSortTest extends BaseClass {
 	/**
 	 * Test data to validate data is still intact after sorting
 	 */
-	@Test(priority = 1)
+	@Test
 	public void testTableDataIntactAfterSort() {
 		// Get Transaction Before Sort
 		tansactionBeforeSort = expensePage.fetchTransactionList();
@@ -41,15 +46,15 @@ public class TableSortTest extends BaseClass {
 		// Get Transaction After Sort
 		tansactionAfterSort = expensePage.fetchTransactionList();
 		// Compare values are retained or not
-		assertEquals(tansactionBeforeSort.equals(tansactionAfterSort), true, "Row's data are intact after sorting");
+		assertEquals("Row's data are intact after sorting", true, tansactionBeforeSort.equals(tansactionAfterSort));
 	}
 
 	/**
 	 * Test method to validate amount gets sorted properly
 	 */
-	@Test(priority = 2)
+	@Test
 	public void testTableDataSort() {
-		assertEquals(expensePage.validateIfAmountIsSorted(), true, "Account is in sorted order");
+		assertEquals("Account is in sorted order", true, expensePage.validateIfAmountIsSorted());
 	}
 
 }

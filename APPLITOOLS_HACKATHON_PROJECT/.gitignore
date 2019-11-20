@@ -5,6 +5,7 @@
 .metadata
 .classpath
 .settings/
+bin
 
 # Maven
 target

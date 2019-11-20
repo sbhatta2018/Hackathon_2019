@@ -6,18 +6,13 @@
 	<artifactId>APPLITOOLS_HACKATHON_PROJECT</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<jre.level>1.8</jre.level>
-		<jdk.level>1.8</jdk.level>
+		<runSuite>**/TraditionalTestSuite.class</runSuite>
 	</properties>
 	<description>A sample Maven project that demonstrates traditional approach vs visual AI to automate web application
     </description>
 	<dependencies>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.9.8</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- <dependency> <groupId>org.testng</groupId> <artifactId>testng</artifactId> 
+			<version>6.9.8</version> <scope>test</scope> </dependency> -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -76,12 +71,21 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
 				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
-					<suiteXmlFiles>
-						<suiteXmlFile>traditional_suite.xml</suiteXmlFile>
-					</suiteXmlFiles>
+					<includes>
+						<include>${runSuite}</include>
+					</includes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.19.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
 </project>

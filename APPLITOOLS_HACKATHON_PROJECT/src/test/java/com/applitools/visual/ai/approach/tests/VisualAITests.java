@@ -37,8 +37,8 @@ public class VisualAITests extends VisualBaseClass {
     private static TestResultsSummary allTestResults;
     private static Properties prop;
     // Page URL's
-    private static String PAGE_URL = System.getProperty("APP_URL");
-    private static String DYNAMIC_URL = System.getProperty("DYNAMIC_URL");
+    private static String PAGE_URL = "V1_URL";//System.getProperty("APP_URL");
+    private static String DYNAMIC_URL = "DYNAMIC_V1_URL";//System.getProperty("DYNAMIC_URL");
     @BeforeClass
     public static void setUp() {
         prop = new Properties();

@@ -1,7 +1,10 @@
 package com.applitools.traditional.approach.tests;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import com.applitools.traditional.approach.base.BaseClass;
 import com.applitools.traditional.approach.webpages.factory.CanvasChart;
@@ -9,6 +12,7 @@ import com.applitools.traditional.approach.webpages.factory.CanvasChart;
 /**
  * This class contains test class for testing canvas page
  */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CanvasChartTest extends BaseClass {
 	static CanvasChart canvasChart;
 
@@ -24,7 +28,8 @@ public class CanvasChartTest extends BaseClass {
 
 	/**
 	 * Test method to validate bar chart numbers and heights
-	 * @throws InterruptedException 
+	 * 
+	 * @throws InterruptedException
 	 */
 	@Test
 	public void validateBarChartsNumberAndHeights() throws InterruptedException {
@@ -39,7 +44,8 @@ public class CanvasChartTest extends BaseClass {
 
 	/**
 	 * Test class to validate next year expense data
-	 * @throws InterruptedException 
+	 * 
+	 * @throws InterruptedException
 	 */
 	@Test
 	public void validateNextYearExpenseData() throws InterruptedException {

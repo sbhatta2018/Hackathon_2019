@@ -1,8 +1,8 @@
 package com.applitools.traditional.approach.tests;
 
-import static org.testng.Assert.assertEquals;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import com.applitools.traditional.approach.base.BaseClass;
 import com.applitools.traditional.approach.webpages.factory.LoginPage;
@@ -28,7 +28,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateLogoPresence() {
-		assertEquals(loginPage.isLogoPresentInHomePage(), true, "Logo Present");
+		assertEquals("Logo Present", true, loginPage.isLogoPresentInHomePage());
 	}
 
 	/**
@@ -36,7 +36,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateLoginFormTextPresence() {
-		assertEquals(loginPage.isLoginFormTextPresent(), true, "'Login Form' text present");
+		assertEquals("'Login Form' text present", true, loginPage.isLoginFormTextPresent());
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateLoginFormText() {
-		assertEquals(loginPage.isLoginFormTextMatches(), true, "Login Form text matched");
+		assertEquals("Login Form text matched", true, loginPage.isLoginFormTextMatches());
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateUserNameLblPresence() {
-		assertEquals(loginPage.isUserNameLabelPresent(), true, "UserName label present");
+		assertEquals("UserName label present", true, loginPage.isUserNameLabelPresent());
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateUserNameLblText() {
-		assertEquals(loginPage.isUserNameLabelMatches(), true, "UserName label text matched");
+		assertEquals("UserName label text matched", true, loginPage.isUserNameLabelMatches());
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validatePasswordlblPresence() {
-		assertEquals(loginPage.isPasswordLabelPresent(), true, "Password label text present");
+		assertEquals("Password label text present", true, loginPage.isPasswordLabelPresent());
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validatePasswordlblText() {
-		assertEquals(loginPage.isPasswordLabelMatches(), true, "Password label text matched");
+		assertEquals("Password label text matched", true, loginPage.isPasswordLabelMatches());
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateUserNameTextField() {
-		assertEquals(loginPage.isUserNameTextFieldPresent(), true, "UserName input field present");
+		assertEquals("UserName input field present", true, loginPage.isUserNameTextFieldPresent());
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateUserNameTextFieldPlaceholder() {
-		assertEquals(loginPage.isUserNameLabelPlaceHolderMatches(), true, "UserName placeholder text matched");
+		assertEquals("UserName placeholder text matched", true, loginPage.isUserNameLabelPlaceHolderMatches());
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validatePasswordTextField() {
-		assertEquals(loginPage.isPasswordTextFieldPresent(), true, "Pasword input field present");
+		assertEquals("Pasword input field present", true, loginPage.isPasswordTextFieldPresent());
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validatePasswordTextFieldPlaceholder() {
-		assertEquals(loginPage.isPasswordLabelPlaceHolderMatches(), true, "Password field placeholder text matched");
+		assertEquals("Password field placeholder text matched", true, loginPage.isPasswordLabelPlaceHolderMatches());
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateUserIconPresence() {
-		assertEquals(loginPage.isUserNameIconPresent(), true, "Login icon present");
+		assertEquals("Login icon present", true, loginPage.isUserNameIconPresent());
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validatePasswordIconPresence() {
-		assertEquals(loginPage.isPasswordIconPresent(), true, "Password icon present");
+		assertEquals("Password icon present", true, loginPage.isPasswordIconPresent());
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateLoginBtnPresence() {
-		assertEquals(loginPage.isLoginButtonPresent(), true, "Login button present");
+		assertEquals("Login button present", true, loginPage.isLoginButtonPresent());
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateLoginButtonText() {
-		assertEquals(loginPage.isLoginBtnTextMatches(), true, "Login button text matched");
+		assertEquals("Login button text matched", true, loginPage.isLoginBtnTextMatches());
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateCheckBoxPresence() {
-		assertEquals(loginPage.isRememberMeCheckBoxPresent(), true, "Remember Me checkBox present");
+		assertEquals("Remember Me checkBox present", true, loginPage.isRememberMeCheckBoxPresent());
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class LoginPageUIElementsTest extends BaseClass {
 	 */
 	@Test
 	public void validateCheckBoxText() {
-		assertEquals(loginPage.isRememberMeTextMatches(), true, "Remember Me checkBox text matched");
+		assertEquals("Remember Me checkBox text matched", true, loginPage.isRememberMeTextMatches());
 
 	}
 }

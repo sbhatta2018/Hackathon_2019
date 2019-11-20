@@ -7,12 +7,14 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Properties;
 
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DynamicContentPage {
 	// Page URL
 	private static String PAGE_URL = System.getProperty("DYNAMIC_URL");

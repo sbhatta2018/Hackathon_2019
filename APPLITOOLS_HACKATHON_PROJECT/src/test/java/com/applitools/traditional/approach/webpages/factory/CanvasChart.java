@@ -16,7 +16,7 @@ public class CanvasChart {
 	private WebElement showExpenseChartBtn;
 
 	// Show Next year expense button
-	@FindBy(xpath = "/html/body/div/div[3]/div[2]/div/div/div[1]/div/button")
+	@FindBy(id = "addDataset")
 	private WebElement showNxtYearExpenseBtn;
 
 	// Click on show expense button
@@ -25,8 +25,8 @@ public class CanvasChart {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(showNxtYearExpenseBtn));
 	}
-	
-	//Click on show next year expense button
+
+	// Click on show next year expense button
 	public void clickOnShowNextYearExpenseData() {
 		showNxtYearExpenseBtn.click();
 	}

@@ -1,10 +1,13 @@
 package com.applitools.traditional.approach.tests;
 
-import static org.testng.Assert.assertEquals;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import com.applitools.traditional.approach.base.BaseClass;
 import com.applitools.traditional.approach.webpages.factory.DynamicContentPage;
@@ -12,6 +15,7 @@ import com.applitools.traditional.approach.webpages.factory.DynamicContentPage;
 /**
  * This class contains test methods for Dynamic Content Test
  */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DynamicContentTest extends BaseClass {
 	static DynamicContentPage dynamicContentPage;
 
@@ -36,7 +40,7 @@ public class DynamicContentTest extends BaseClass {
 	@Test
 	public void validateFirstGIFPresence() throws InterruptedException {
 		Thread.sleep(2000);
-		assertEquals(dynamicContentPage.isFlashSaleFirstExists(), true, "First Flash Sell Exists");
+		assertEquals("First Flash Sell Exists",true,dynamicContentPage.isFlashSaleFirstExists());
 	}
 
 	/**
@@ -47,7 +51,7 @@ public class DynamicContentTest extends BaseClass {
 	@Test
 	public void validateSecondGIFPresence() throws InterruptedException {
 		Thread.sleep(2000);
-		assertEquals(dynamicContentPage.isFlashSaleSecondExists(), true, "Second Flash Sell Exists");
+		assertEquals("Second Flash Sell Exists",true,dynamicContentPage.isFlashSaleSecondExists());
 	}
 
 	/**
