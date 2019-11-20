@@ -6,6 +6,8 @@
 	<artifactId>APPLITOOLS_HACKATHON_PROJECT</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
+		<jre.level>1.8</jre.level>
+		<jdk.level>1.8</jdk.level>
 		<runSuite>**/TraditionalTestSuite.class</runSuite>
 	</properties>
 	<description>A sample Maven project that demonstrates traditional approach vs visual AI to automate web application
