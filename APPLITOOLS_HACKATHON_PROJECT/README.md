@@ -64,8 +64,8 @@ DYNAMIC_V2_URL = https://demo.applitools.com/hackathonV2.html?showAd=true
     Pre-Requisites -
 		* Maven is installed
 	Execution command - Navigate to project base directory and provide the below commands
-		* 'mvn -f pom.xml clean test surefire-report:report -DAPP_URL=V1_URL -DDYNAMIC_URL=DYNAMIC_V1_URL' for execution in V1 environment
-		* 'mvn -f pom.xml clean test surefire-report:report -DAPP_URL=V2_URL -DDYNAMIC_URL=DYNAMIC_V2_URL' for execution in V2 environment
+		* 'mvn -f pom.xml clean test -DAPP_URL=V1_URL -DDYNAMIC_URL=DYNAMIC_V1_URL' for execution in V1 environment
+		* 'mvn -f pom.xml clean test -DAPP_URL=V2_URL -DDYNAMIC_URL=DYNAMIC_V2_URL' for execution in V2 environment
 	Junit Report -
 		The test run report can be found under 'APPLITOOLS_HACKATHON_PROJECT\target\surefire-reports' and also in console
 ## Visual AI Approach
