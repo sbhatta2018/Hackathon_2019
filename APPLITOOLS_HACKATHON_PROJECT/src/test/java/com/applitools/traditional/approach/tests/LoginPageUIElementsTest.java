@@ -159,4 +159,28 @@ public class LoginPageUIElementsTest extends BaseClass {
 		assertEquals("Remember Me checkBox text matched", true, loginPage.isRememberMeTextMatches());
 
 	}
+
+	/**
+	 * Test method to validate presence of twitter logo
+	 */
+	@Test
+	public void validateTwitterLogoPresence() {
+		assertEquals("Twitter Logo Present", true, loginPage.isTwitterLogoPresentInHomePage());
+	}
+
+	/**
+	 * Test method to validate presence of facebook logo
+	 */
+	@Test
+	public void validateFacebookLogoPresence() {
+		assertEquals("Facebook Logo Present", true, loginPage.isFacebookLogoPresentInHomePage());
+	}
+
+	/**
+	 * Test method to validate presence of linked in logo
+	 */
+	@Test
+	public void validateLinkedInLogoPresence() {
+		assertEquals("Linked In Logo Present", true, loginPage.isLinkedInLogoPresentInHomePage());
+	}
 }

@@ -79,10 +79,22 @@ public class LoginPage {
 	// Compare Page Logo Heading
 	@FindBy(className = "logo-label")
 	private WebElement expenseChartLogo;
-	
-	//Credit Card Text
+
+	// Credit Card Text
 	@FindBy(xpath = "/html/body/div/div[3]/div[1]/ul/li[2]/a/span")
 	private WebElement creditCards;
+
+	// Twitter Logo
+	@FindBy(xpath = "/html/body/div/div/form/div[3]/div[2]/a[1]/img")
+	private List<WebElement> twitterLogo;
+
+	// Facebook Logo
+	@FindBy(xpath = "/html/body/div/div/form/div[3]/div[2]/a[2]/img")
+	private List<WebElement> facebookLogo;
+
+	// Linkedin logo
+	@FindBy(xpath = "/html/body/div/div/form/div[3]/div[2]/a[3]/img")
+	private List<WebElement> linkedInLogo;
 
 	// Verify if logo image present
 	public boolean isLogoPresentInHomePage() {
@@ -206,5 +218,20 @@ public class LoginPage {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(expenseChartLogo));
 		return creditCards.getText().toString().equals("Credit cards");
+	}
+
+	// Verify twitter logo presence
+	public boolean isTwitterLogoPresentInHomePage() {
+		return twitterLogo.size() == 1;
+	}
+
+	// Verify facebook logo presence
+	public boolean isFacebookLogoPresentInHomePage() {
+		return facebookLogo.size() == 1;
+	}
+
+	// Verify linked in logo presence
+	public boolean isLinkedInLogoPresentInHomePage() {
+		return linkedInLogo.size() == 1;
 	}
 }
