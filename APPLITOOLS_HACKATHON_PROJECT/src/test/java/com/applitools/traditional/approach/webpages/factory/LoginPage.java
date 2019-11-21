@@ -84,17 +84,9 @@ public class LoginPage {
 	@FindBy(xpath = "/html/body/div/div[3]/div[1]/ul/li[2]/a/span")
 	private WebElement creditCards;
 
-	// Twitter Logo
-	@FindBy(xpath = "/html/body/div/div/form/div[3]/div[2]/a[1]/img")
-	private List<WebElement> twitterLogo;
-
-	// Facebook Logo
-	@FindBy(xpath = "/html/body/div/div/form/div[3]/div[2]/a[2]/img")
-	private List<WebElement> facebookLogo;
-
-	// Linkedin logo
-	@FindBy(xpath = "/html/body/div/div/form/div[3]/div[2]/a[3]/img")
-	private List<WebElement> linkedInLogo;
+	// Scial Media Logo
+	@FindBy(tagName = "img")
+	private List<WebElement> socialMediaLogo;
 
 	// Verify if logo image present
 	public boolean isLogoPresentInHomePage() {
@@ -222,16 +214,34 @@ public class LoginPage {
 
 	// Verify twitter logo presence
 	public boolean isTwitterLogoPresentInHomePage() {
-		return twitterLogo.size() == 1;
+		boolean flag = false;
+		for (WebElement w : socialMediaLogo) {
+			if (w.getAttribute("src").contains("twitter")) {
+				flag = true;
+			}
+		}
+		return flag;
 	}
 
 	// Verify facebook logo presence
 	public boolean isFacebookLogoPresentInHomePage() {
-		return facebookLogo.size() == 1;
+		boolean flag = false;
+		for (WebElement w : socialMediaLogo) {
+			if (w.getAttribute("src").contains("facebook")) {
+				flag = true;
+			}
+		}
+		return flag;
 	}
 
 	// Verify linked in logo presence
 	public boolean isLinkedInLogoPresentInHomePage() {
-		return linkedInLogo.size() == 1;
+		boolean flag = false;
+		for (WebElement w : socialMediaLogo) {
+			if (w.getAttribute("src").contains("linkedin")) {
+				flag = true;
+			}
+		}
+		return flag;
 	}
 }
